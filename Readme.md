@@ -9,7 +9,7 @@ Este repositorio es un ente vivo. **Clase a clase**, se irá subiendo el conteni
 * Ejemplos prácticos explicados.
 * Resolución de desafíos en vivo.
 
->❗️ **Fecha de caducidad:** Para mantener el orden de los recursos, este repositorio será **dado de baja permanentemente 30 días después** de finalizado el curso.
+>❗️ **Fecha de caducidad:** Para mantener el orden de los recursos, este repositorio será **dado de baja permanentemente 20 días después** de finalizado el curso.
 
 ---
 
