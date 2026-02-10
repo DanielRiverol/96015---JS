@@ -65,15 +65,66 @@ const CLAVE = "oruga";
 // }
 
 // condicional anidado
-let nombreUsuario = prompt("Ingresa tu nombre");
-if (nombreUsuario == nombre) {
-  console.log("Hola " + nombre);
-  let claveIngresada = prompt("Ingresa tu clave");
-  if (claveIngresada == CLAVE) {
-    console.log("Ya podes ingresar al sistema");
-  } else {
-    console.log("Error de credencial");
-  }
+// let nombreUsuario = prompt("Ingresa tu nombre");
+// if (nombreUsuario == nombre) {
+//   console.log("Hola " + nombre);
+//   let claveIngresada = prompt("Ingresa tu clave");
+//   if (claveIngresada == CLAVE) {
+//     console.log("Ya podes ingresar al sistema");
+//   } else {
+//     console.log("Error de credencial");
+//   }
+// } else {
+//   console.log("NO estas registrado");
+// }
+
+// Operadores logicos && AND. 5 >= 5 && ingreso == CLAVE true && true = true
+// OR || true || true =true // false || true =true // false || true = true // false || false = false
+// let esEstudiante = prompt("Sos estudiante? (si /no)");
+
+// let edad = parseInt(prompt("Que edad tenes?"));
+// let rangoEdad = (edad >= 18 && edad <= 25)
+
+// if (esEstudiante == "si" && rangoEdad) {
+//   console.log("Estas en condiciones de aplicar a la beca");
+// } else {
+//   console.log("Lamentablemente tenes que abonar la cuota completa");
+// }
+
+// let passUser = "123";
+// let user = "pedro";
+
+// let ingresoUser = prompt("Ingresa tu ususario");
+// let ingresoPass = prompt("Ingresa tu pass");
+
+// if (ingresoUser == user && ingresoPass == passUser) {
+//   console.log("Binenvenido al sistema");
+// } else {
+//   console.log("Credenciales invalidas");
+// }
+
+// let clima = prompt('Como esta el clima afuera? (lluvia, nieve, sol)')
+
+// let resultClima= (clima == 'lluvia' || clima == "nieve")//variable booleana
+// console.log(resultClima);
+
+// if(resultClima || 5 == 5){
+//   console.log("Llevate abrigo y un paraguas");
+
+// }else{
+//   console.log("Con una camiseta vas joya");
+
+// }
+
+let usuario = prompt("INgresa tu usuario");
+
+// if (usuario == "") {
+//   console.log("Por favor completa el campo");
+// } else {
+//   console.log("Bienvenido " + usuario);
+// }
+if (usuario != "") {
+  console.log("Bienvenido " + usuario);
 } else {
-  console.log("NO estas registrado");
+  console.log("Por favor completa el campo");
 }
