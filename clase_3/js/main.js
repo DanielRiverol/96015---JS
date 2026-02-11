@@ -70,18 +70,50 @@
 //   console.log(i);
 // }
 
-let pisoDeseado = parseInt(prompt("A que piso desas ir? 1 a 5"));
+// let pisoDeseado = parseInt(prompt("A que piso desas ir? 1 a 5"));
 
-for (let piso = 1; piso <= 5; piso++) {
-  if (piso == 3) {
-    console.log("Piso en mantenimiento. NO nos deteremos aqui");
-    continue;
-  }
-  console.log("Subiendo.... Piso:" + piso);
+// for (let piso = 1; piso <= 5; piso++) {
+//   if (piso == 3) {
+//     console.log("Piso en mantenimiento. NO nos deteremos aqui");
+//     continue;
+//   }
+//   console.log("Subiendo.... Piso:" + piso);
 
-  if (piso == pisoDeseado) {
-    console.log("Lllegaste al piso:" + piso);
-    break;
-  }
-}
-console.log("Puertas abriendo.... cudado al bajar");
+//   if (piso == pisoDeseado) {
+//     console.log("Lllegaste al piso:" + piso);
+//     break;
+//   }
+// }
+// console.log("Puertas abriendo.... cuidado al bajar");
+
+// while = mientras
+// let contador = 0;
+
+// while (contador <= 10) {
+//   console.log(contador);
+//   // condicion de salida
+//   contador++;
+// }
+
+// let ingreso = prompt("Ingresa el produto a la lista. Presiona 0 para terminar");
+
+// while (ingreso != "0") {
+//   console.log("El producto ingresa es: " + ingreso);
+
+//   ingreso = prompt("Ingresa el produto a la lista. Presiona 0 para terminar");
+// }
+
+// while (true) {
+//   let ingreso = prompt("Ingresa producto (0 para salir)");
+
+//   if (ingreso === "0") break;
+
+//   console.log(ingreso);
+// }
+// let ingreso;
+// do {
+//   ingreso = prompt("Ingresa el produto a la lista. Presiona 0 para terminar");
+//   console.log(ingreso);
+
+//   //controlar si engresa 0 no se imprima
+// } while (ingreso != "0");
