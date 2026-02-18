@@ -39,6 +39,7 @@ if (ingresar) {
       alert("Tu saldo es: $" + saldo);
     }
     // completar el resto de las opciones
+    // Validen todo lo que puedan
     // condicion de salida
     opcion = prompt(
       "Elegí una opción: \n1- Saldo. \n2 - Retiro de dinero. \n3 - Depósito. \nPresioná X para finalizar.",
