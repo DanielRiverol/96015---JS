@@ -30,10 +30,17 @@ const libroLS = JSON.parse(localStorage.getItem("libro"));
 // console.log(libroLS.autor);
 // console.log(libroLS.publicacion);
 
-const user = { nickname: "dani", pass: 12345 };
+// const user = { nickname: "dani", pass: 12345 };
+// localStorage.setItem('usuario', JSON.stringify(user))
 
+const userLS = JSON.parse(localStorage.getItem("usuario"));
 
-localStorage.setItem("user", JSON.stringify(user));
-console.log( JSON.parse(localStorage.getItem("user")));
+console.log(userLS);
+// de objeto a JSON stringify | de JSON a objeto parse
+// localStorage.setItem("user", JSON.stringify(user));
+// console.log( JSON.parse(localStorage.getItem("user")));
 
-
+// eliminar determinada clave removeItem('clave')
+localStorage.removeItem('is-active');
+localStorage.removeItem('saludo');
+// localStorage.clear()

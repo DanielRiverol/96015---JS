@@ -4,11 +4,17 @@ function Libro(titulo, autor, precio) {
   this.autor = autor;
   this.precio = precio;
 }
-
+// literal
+// const obje={
+//   nombre:"valor"
+// }
+// instanciando libros (objetos)
 const libro1 = new Libro("cien años de soledad", "g marquez", 24000);
 const libro2 = new Libro("belgrano", "daniel balmaceda", 37500);
 
+// creamos el array
 const biblioteca = [];
+// llenando el array 
 biblioteca.push(new Libro("harry potter 1", "jk rowling", 20000));
 biblioteca.push(libro1, libro2)
 // console.log(biblioteca.length);
