@@ -41,7 +41,7 @@ const serviciosBaratos = filtrarMenorPrecio(servicios, 2500);
 
 const servMasBaratos = filtrarMenorPrecio(serviciosBaratos, 1500);
 // console.log(servMasBaratos);
-
+// funciones de filtrado
 function filtrarPorRango(arr, menor, mayor) {
   return arr.filter((servi) => servi.precio > menor && servi.precio < mayor);
 }
@@ -81,7 +81,7 @@ const servicioContratados = [];
 servicioContratados.push(servicios[1], servicios[4]);
 
 console.log(servicioContratados);
-let cargo = 500;
+let cargo =0;
 
 console.log(
   servicioContratados.reduce((acc, el) => {

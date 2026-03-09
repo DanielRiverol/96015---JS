@@ -67,7 +67,7 @@ function asignarOperacion(op) {
 // let sumar = asignarOperacion("suma");
 // console.log(sumar(2, 67));
 // console.log(sumar(12, 33));
-// console.log(sumar(12, 33));
+//  console.log(sumar(12, 33));
 
 // let restar = asignarOperacion("resta");
 // console.log(restar(2, 67));
