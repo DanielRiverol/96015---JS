@@ -10,13 +10,13 @@ const productos = [
   { id: 8, nombre: "arroz", precio: 500 },
 ];
 const personas = [
-  "Matias",
-  "Pablo",
-  "Maria",
-  "Tobias",
-  "Marcia",
-  "Kevin",
-  "Karen",
+  // "Matias",
+  // "Pablo",
+  // "Maria",
+  // "Tobias",
+  // "Marcia",
+  // "Kevin",
+  // "Karen",
   "Federico",
   "Carolina",
   "Facundo",
@@ -60,15 +60,80 @@ const tituloSecundario = document.getElementById("secundario");
 console.log(tituloSecundario);
 // let nombre = prompt("Ingresa tu nombre");
 // console.log(nombre);
+const inputNombre = document.querySelector('input[type="text"]');
 
 tituloSecundario.innerHTML = `
-Hola tarola
+Hola ${inputNombre.value}
 `;
+
+
 // tituloSecundario.className = "card";
 
 // tituloSecundario.style.background ="green"
-tituloSecundario.classList.add("card")
-tituloSecundario.classList.remove("card")
-let temperatura = 0;
+tituloSecundario.classList.add("card");
+tituloSecundario.classList.remove("card");
+let temperatura = 21;
+
+const nodoTemperatura = document.getElementById("temperatura");
+nodoTemperatura.style.padding= "10px"
+
+let color = "";
+if (temperatura > 30) {
+  color = "#ff0000";
+  nodoTemperatura.innerHTML = "Hace mucho calor";
+  nodoTemperatura.style.color= "white"
+} else if (temperatura >= 20) {
+  color = "orange";
+  nodoTemperatura.innerHTML = "Hace  calor";
+} else if (temperatura >= 10) {
+  color = "cyan";
+  nodoTemperatura.innerHTML = "Esta agradable";
+}else{
+  color = "blue";
+  nodoTemperatura.innerHTML = "Hace frio";
+  nodoTemperatura.style.color= "white"
+  
+}
+nodoTemperatura.style.background = color;
+// crear elementos
+const divContent= document.createElement("div")
+const parrafo= document.createElement("p")
+parrafo.className= 'box'
+parrafo.innerHTML= "soy un parrafo creado desde JS"
+divContent.className= "card"
+divContent.append(parrafo)
+const contenedor= document.getElementById('contenedor')
+
+contenedor.append(divContent)
+// document.body.append(parrafo)
+//  agregar contenido dinamico...
+const listNombres= document.getElementById('nombres')
+
+personas.push("Oclivar","Andrea", "Mauricio")
+personas.push(inputNombre.value);
+for (const nombre of personas) {
+  // console.log(nombre);
+  const li = document.createElement('li')
+  li.innerText= nombre
+  listNombres.append(li)
+}
+
+// acceso a los inputs
+// const inputNombre = document.querySelector('input[type="text"]')
 
 
+// const inputs = document.querySelectorAll('input')
+// console.log(inputs[1]);
+
+
+const listaProductos= document.querySelector('ul#productos')
+for (const producto of productos) {
+  // console.log(nombre);
+  const li = document.createElement("li");
+  li.innerHTML = `<div class="box" id=${producto.id}>
+      <h2>${producto.nombre.toUpperCase()}</h2>
+      <p>Precio: $${producto.precio}</p>
+    </div>`;
+  listaProductos.append(li);
+}
+// fragment
