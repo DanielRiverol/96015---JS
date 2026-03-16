@@ -87,22 +87,53 @@ tituloSec.textContent = "HOLA MUNDO";
 
 // eventos de teclado
 const inputs = document.querySelectorAll("input");
-
+const inputBusqueda = inputs[0];
+const btnBuscar = document.querySelector("#btnSearch");
+const contenedor = document.getElementById("contenedor");
 // console.log(inputs);
-// inputs[0].addEventListener('keydown',()=>{
+// inputBusqueda.addEventListener('keydown',()=>{
 //   // console.log('presionaste una tecla');
 //   console.log(inputs[0].value);
 //   pais.innerHTML = inputs[0].value
 
 // })
-// inputs[0].addEventListener('keyup',()=>{
+// inputBusqueda.addEventListener('keyup',()=>{
 //   // console.log('presionaste una tecla');
 //   console.log(inputs[0].value);
 //   pais.innerHTML = inputs[0].value
 
 // })
-inputs[0].addEventListener("input", () => {
-  // console.log('presionaste una tecla');
-  console.log(inputs[0].value);
-  pais.innerHTML = inputs[0].value;
+// inputBusqueda.addEventListener("input", () => {
+//   // console.log('presionaste una tecla');
+//   console.log(inputs[0].value);
+//   pais.innerHTML = inputs[0].value;
+// });
+
+// funcion crearHtml
+function crearHtml(el) {
+  // limpiamos el contenedor
+  contenedor.innerHTML = "";
+  if (!el) {
+    contenedor.innerHTML = "SERVICIO NO ENCONTRADO";
+    return;
+  }
+
+  const html = `<div class="card">
+  <img src="./img/${el.img}" alt="${el.nombre}">
+  <hr>
+  <h3>${el.nombre}</h3>
+  <p>$${el.precio}</p>
+  <div class="card-action">
+    <button class="btn" id="${el.id}">Comprar</button>
+  </div>
+</div>`;
+
+  contenedor.innerHTML = html;
+}
+
+btnBuscar.addEventListener("click", () => {
+  // console.log(inputBusqueda.value);
+  const encontrado = buscarServicio(servicios, inputBusqueda.value);
+  // console.log(encontrado);
+  crearHtml(encontrado);
 });
