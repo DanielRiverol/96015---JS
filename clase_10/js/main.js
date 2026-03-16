@@ -137,3 +137,19 @@ btnBuscar.addEventListener("click", () => {
   // console.log(encontrado);
   crearHtml(encontrado);
 });
+
+// SELECT
+const select = document.querySelector("#paises");
+paises.forEach((pais) => {
+  let option = document.createElement("option");
+  option.value = pais;
+  option.innerText = pais;
+  select.append(option);
+});
+
+select.addEventListener("change", () => {
+  let option = select.options[select.selectedIndex].value;
+  const parrafo = document.querySelector("#info");
+  parrafo.innerHTML = `Pais seleccionado: <em>${option}</em>`;
+  console.log(option);
+});
