@@ -8,7 +8,7 @@ const paises = [
   "Perú",
   "Chile",
   "Polonia",
-  "Canada"
+  "Canada",
 ];
 const servicios = [
   { id: 1, nombre: "limpieza de cutis", precio: 1200, img: "limpieza.jpg" },
@@ -45,3 +45,64 @@ function filtrarServicio(arr, filtro) {
   });
   return filtrado;
 }
+// Acceder a los elementos del DOM
+// getElementBy...('') <=> querySelector\All('')
+
+const caja = document.querySelector("#caja");
+const tituloSec = document.querySelector("#secundario");
+const pais = document.querySelector("#pais");
+console.log(tituloSec);
+// prefijo onNOMBRE-ENVENTO
+// tituloSec.onclick = ()=>{
+//   alert('Hiciste clic en el titulo secundario')
+// }
+//addEventListener()
+tituloSec.addEventListener("click", () => {
+  tituloSec.innerHTML = "MODIFICADO POR EL EVENTO CLIC";
+});
+
+tituloSec.textContent = "HOLA MUNDO";
+
+// caja.addEventListener('mouseup', ()=>{
+//   console.log("Soltaste el boton");
+// })
+// caja.addEventListener('mousedown', ()=>{
+//   console.log("Presionaste el boton");
+// })
+// caja.addEventListener("mouseenter", () => {
+//   // console.log("Esta dentro de la caja");
+//   caja.style.backgroundImage = "url(./img/estados.jpg)";
+//   pais.innerHTML = "ESTADOS";
+// });
+// caja.addEventListener("mouseleave", () => {
+//   // console.log("Esta fuera de la caja");
+//   caja.style.backgroundImage = "url(./img/australia.jpg)";
+//   pais.innerHTML = "<h2> AUSTRALIA </h2>";
+// });
+// caja.addEventListener("click", () => {
+//   // console.log("Esta fuera de la caja");
+//   caja.style.backgroundImage = "url(./img/pum.png)";
+//   pais.innerHTML = "PUM";
+// });
+
+// eventos de teclado
+const inputs = document.querySelectorAll("input");
+
+// console.log(inputs);
+// inputs[0].addEventListener('keydown',()=>{
+//   // console.log('presionaste una tecla');
+//   console.log(inputs[0].value);
+//   pais.innerHTML = inputs[0].value
+
+// })
+// inputs[0].addEventListener('keyup',()=>{
+//   // console.log('presionaste una tecla');
+//   console.log(inputs[0].value);
+//   pais.innerHTML = inputs[0].value
+
+// })
+inputs[0].addEventListener("input", () => {
+  // console.log('presionaste una tecla');
+  console.log(inputs[0].value);
+  pais.innerHTML = inputs[0].value;
+});
