@@ -151,5 +151,17 @@ select.addEventListener("change", () => {
   let option = select.options[select.selectedIndex].value;
   const parrafo = document.querySelector("#info");
   parrafo.innerHTML = `Pais seleccionado: <em>${option}</em>`;
-  console.log(option);
+});
+// Formularios... submit
+const formContacto = document.querySelector("form");
+formContacto.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(e.target);
+  // console.log(e.target[0]);
+  // console.log(e.target[1]);
+  const usuario = {
+    nombre: e.target[0].value,
+    password: e.target[1].value,
+  };
+  console.log(usuario);
 });
