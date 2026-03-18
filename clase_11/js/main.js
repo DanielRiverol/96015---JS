@@ -32,4 +32,4 @@ function logSquare(num) {
   console.log(square(num));
 }
 
-//logSquare(2);
+// logSquare(2);
