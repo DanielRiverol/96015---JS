@@ -32,7 +32,7 @@ function logSquare(num) {
   console.log(square(num));
 }
 
-// logSquare(2);
+ logSquare(5);
 // console.log('Primer plato');
 // setTimeout(()=>{
 //   console.log('Segundo plato muy sucio');
@@ -44,5 +44,8 @@ function logSquare(num) {
 // console.log('CUARTO plato');
 
 btn.addEventListener("click", () => {
+  setTimeout(() => {
+    card.classList.add("hide");
+  }, 1500);
   card.classList.remove("hide");
 });
