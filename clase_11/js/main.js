@@ -33,3 +33,16 @@ function logSquare(num) {
 }
 
 // logSquare(2);
+// console.log('Primer plato');
+// setTimeout(()=>{
+//   console.log('Segundo plato muy sucio');
+// },2000); //1s = 1000ms
+// setTimeout(()=>{
+//   console.log('TERCER plato muy sucio');
+// },1000); //1s = 1000ms
+
+// console.log('CUARTO plato');
+
+btn.addEventListener("click", () => {
+  card.classList.remove("hide");
+});
