@@ -32,7 +32,7 @@ function logSquare(num) {
   console.log(square(num));
 }
 
- logSquare(5);
+//  logSquare(5);
 // console.log('Primer plato');
 // setTimeout(()=>{
 //   console.log('Segundo plato muy sucio');
@@ -49,3 +49,37 @@ btn.addEventListener("click", () => {
   }, 1500);
   card.classList.remove("hide");
 });
+
+const renderServicios = (arr) => {
+  contenedor.innerHTML = "";
+  let html;
+  for (const item of arr) {
+    const { id, nombre, img, precio } = item;
+    html = `
+        <div class="card">
+      		<div class="card-image">
+        	<img src="../img/${img}">
+        	<span class="card-title">${nombre.toUpperCase()}</span>
+       </div>
+     	 <div class="card-content"> 
+     		<p>$${precio}</p>
+      </div>
+      <div class="card-action">
+        <button class="btn btn-normal" id="${id}">Comprar</button>
+      </div>
+     </div>
+     `;
+    contenedor.innerHTML = contenedor.innerHTML + html;
+    // contenedor.innerHTML += html;
+  }
+};
+// renderServicios(servicios)
+// fetch
+fetch("./data/data.json")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    setTimeout(() => {
+      renderServicios(data);
+    }, 2000);
+  });
