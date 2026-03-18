@@ -164,4 +164,8 @@ formContacto.addEventListener("submit", (e) => {
     password: e.target[1].value,
   };
   console.log(usuario);
+  formContacto.reset()
+
+  e.target[2].value = "Ingresando..."
+
 });
