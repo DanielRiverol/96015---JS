@@ -75,11 +75,47 @@ const renderServicios = (arr) => {
 };
 // renderServicios(servicios)
 // fetch
-fetch("./data/data.json")
-  .then((response) => response.json())
-  .then((data) => {
+// fetch("./data/data.json")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data);
+//     setTimeout(() => {
+//       renderServicios(data);
+//     }, 2000);
+//   });
+// fetch("https://api.npoint.io/bc82c86e3770cce33eea")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data);
+//     setTimeout(() => {
+//       renderServicios(data);
+//     }, 2000);
+//   })
+//   .catch(() => {
+//     console.log("Hubio un error");
+//     contenedor.innerHTML = "Error al cargar los servicios";
+//   })
+//   .finally(() => {
+//     console.log("Me ejecuto siempre");
+//   });
+
+// async await
+async function pedirServicios() {
+  try {
+    const response = await fetch("https://api.npoint.io/bc82c86e3770cce33eea");
+
+    const data = await response.json();
+
     console.log(data);
     setTimeout(() => {
       renderServicios(data);
     }, 2000);
-  });
+  } catch (error) {
+    console.log("Ha ocurrido un error" + error);
+    contenedor.innerHTML = "Error al cargar los datos";
+  } finally {
+    console.log("Operacion finalizada");
+  }
+}
+
+pedirServicios();
