@@ -340,3 +340,19 @@ progress[value]::-moz-progress-bar {
     transform: rotate(360deg);
   }
 }
+form {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1.4px solid rgb(68, 134, 209);
+  border-radius: 5px;
+}
+
+form input {
+  padding: 3px;
+  font-size: 1.025rem;
+}
