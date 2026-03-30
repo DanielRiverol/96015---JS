@@ -56,22 +56,33 @@ function crearHtml() {
   });
 }
 
+btnGuardar.addEventListener("click", (e) => {
+  e.preventDefault();
 
-btnGuardar.addEventListener('click', (e)=>{
-  e.preventDefault()
+  const archivo = inputImg.files[0];
 
-const archivo = inputImg.files[0]
+  if (!archivo) {
+    // agregar un mensaje en el DOM
+    alert("Selecciona un archivo");
+    return;
+  }
+  // crear una url
+  const urlTemp = URL.createObjectURL(archivo);
+  console.log(urlTemp);
 
-if(!archivo){
-  // agregar un mensaje en el DOM
-  alert("Selecciona una archivo")
-  return
-}
-// crear una url 
-const urlTemp = URL.createObjectURL(archivo)
-console.log(urlTemp);
+  // instanciar Producto
+  const producto = new Producto(
+    inputNombre.value,
+    inputDescripcion.value,
+    inputPrecio.value,
+    inputTalle.value,
+    urlTemp,
+  );
 
-// instanciar Producto
-
-
-})
+  console.log(producto);
+  
+  guardarProducto(producto);
+  crearHtml();
+  // limpio el form
+  document.querySelector("#form-ingreso").reset();
+});
