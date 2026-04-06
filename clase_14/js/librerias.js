@@ -50,8 +50,8 @@ botonSwal.addEventListener("click", () => {
 // Date()
 const DateTime = luxon.DateTime;
 const ahora = DateTime.now();
-console.log(ahora.toLocaleString());
-console.log(ahora.setLocale("en").toLocaleString());
+// console.log(ahora.toLocaleString());
+// console.log(ahora.setLocale("en").toLocaleString());
 // console.log(ahora.year);
 // console.log(ahora.month);
 // console.log(ahora.day);
@@ -85,3 +85,32 @@ btnCalcular.addEventListener("click", () => {
     denyButtonText: `No quiero`,
   });
 });
+// CREDIT CARD
+const creditCard = document.querySelector("#credit-card");
+const icons = document.querySelectorAll(".icons i.fa-brands");
+
+const cleave = new Cleave("#card-number", {
+  creditCard: true,
+  onCreditCardTypeChanged: function (type) {
+    // update UI ...
+    console.log(type);
+
+    switch (type) {
+      case "visa":
+        icons[0].classList.add("active");
+        break;
+      case "mastercard":
+        icons[3].classList.add("active");
+        break;
+      case "unknown":
+        icons.forEach((icon) => icon.classList.remove("active"));
+        break;
+      default:
+        // if(type == 'unknown')
+        //   icons.forEach(icon=> icon.classList.remove('active'))
+        break;
+    }
+  },
+});
+
+// CREAR UNA FUNCION CONSTRUCTORA DE LA TARJETA
