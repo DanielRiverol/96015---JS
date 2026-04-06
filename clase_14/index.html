@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/0bb154f3a0.js"
+      crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Clase 14 | Comisión 96015</title>
+  </head>
+  <body>
+    <main>
+      <h1><span>Clase 14</span></h1>
+      <hr />
+      <h2>Librerías</h2>
+
+      <div class="contenedor">
+        <h3>Notificaciones</h3>
+        <button class="btn btn-warn btn-lg" id="botonToast">
+          Finalizar compra
+        </button>
+        <p class="parrafo" id="par"></p>
+        <button class="btn btn-normal btn-lg" id="botonSwal">
+          Cancelar compra
+        </button>
+      </div>
+      <div class="contenedor" id="fechas">
+        <h3>Reservas</h3>
+
+        <div class="p-3">
+          <label for="checkIn">Fecha inicial:</label>
+          <input type="date" id="checkIn" name="checkIn" min="" max="" />
+        </div>
+        <div class="p-3">
+          <label for="checkOut">Fecha final:</label>
+          <input type="date" id="checkOut" name="checkOut" min="" max="" />
+        </div>
+        <div class="p-3">
+          <input
+            type="button"
+            class="btn btn-success"
+            value="Calcular"
+            id="calcular" />
+        </div>
+      </div>
+    </main>
+   
+    <script
+      src="https://cdn.jsdelivr.net/npm/luxon@3.7.2/build/global/luxon.min.js"
+      integrity="sha256-UWxf6lyCvfH7XEcrmq/cqc2m3IBrLBLOnWLC4Pw0gQQ="
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/librerias.js"></script>
+  </body>
+</html>
