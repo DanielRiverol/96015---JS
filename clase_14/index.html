@@ -51,17 +51,60 @@
             id="calcular" />
         </div>
       </div>
+      <div class="contenedor credit-card">
+          <h3>Finalizar Compra</h3>
+          <form action="" id="credit-card">
+            <div class="form-control">
+              <label for="card-number">Nombre del titular</label>
+              <input
+                type="text"
+                placeholder="Max Power"
+                id="titular"
+                required />
+            </div>
+            <div class="form-control">
+              <label for="card-number">Número de tarjeta</label>
+              <input
+                type="text"
+                placeholder="0000 000 000 0000"
+                id="card-number"
+                required />
+            </div>
+            <div class="form-control">
+              <label for="ccv">Código de seguridad</label>
+              <input
+                type="text"
+                id="ccv"
+                placeholder="000"
+                maxlength="3"
+                required />
+            </div>
+            <div class="form-control">
+              <div class="icons">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-amex"></i>
+                <i class="fa-brands fa-cc-diners-club"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+              </div>
+            </div>
+            <div class="form-control">
+              <input type="submit" value="Comprar" class="btn btn-success" />
+            </div>
+          </form>
+        </div>
     </main>
-   
+
     <script
       src="https://cdn.jsdelivr.net/npm/luxon@3.7.2/build/global/luxon.min.js"
       integrity="sha256-UWxf6lyCvfH7XEcrmq/cqc2m3IBrLBLOnWLC4Pw0gQQ="
       crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"
+      integrity="sha256-frGUwmSN4CLLjyk5m59ECdXsDMUxTW5O6hdceNHVCJo="
+      crossorigin="anonymous"></script>
     <!-- <script src="./js/main.js"></script> -->
     <script src="./js/librerias.js"></script>
   </body>
